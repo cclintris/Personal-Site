@@ -1,0 +1,237 @@
+.canvas__container {
+    background: rgba(0, 0, 0, .3);
+    border-radius: 2rem;
+    overflow: hidden;
+
+    height: 50vh;
+}
+
+.grid-container{
+    width: 120%;
+    height: 110%;
+    
+    position: relative;
+    left: 50%;
+    transform: translate3d(-50%, 10%, 0);
+
+    padding:10px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "top top tpright"
+    "left main right"
+    "btleft bottom bottom"
+  }
+
+.grid-container > div{
+    background-color: rgba(0, 0, 0, .4);
+    border:1px solid rgba(0, 0, 0, .8);
+
+    color:#fff;
+    padding:20px 30px;
+    text-align:center;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.grid-container > div > p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    font-family: 'Alex Brush', cursive;
+    font-size: 2rem;
+}
+
+.background-img {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: -22rem;
+    filter: grayscale(100%);
+    transition: all 1300ms ease;
+}
+
+.background-img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.top {
+    grid-area: top;
+}
+
+.top-img {
+    left: 0%;
+    top: 20%;
+    width: 110%;
+}
+
+.tpright {
+    grid-area: tpright;
+}
+
+.top-right-img {
+    width: 120%;
+    left: -15%;
+    top: 230%;
+}
+
+.left {
+    grid-area: left;
+}
+
+.left-img {
+    width: 150%;
+    left: -20%;
+    top: 210%;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main-img {
+    width: 150%;
+    left: -20%;
+    top: 180%;
+}
+
+.right {
+    grid-area: right;
+}
+
+.right-img {
+    width: 150%;
+    left: -20%;
+    top: 150%;
+}
+
+.btleft {
+    grid-area: btleft;
+}
+
+.btleft-img {
+    width: 120%;
+    left: -10%;
+    top: 240%;
+}
+
+.bottom {
+    grid-area: bottom;
+}
+
+.bt-img {
+    width: 110%;
+    left: -5%;
+    top: 180%;
+}
+
+.fontBlack {
+    color: black;
+    opacity: 2;
+}
+
+
+/* ================== Media Query (medium devices) ==================== */
+
+@media screen and (max-width: 1024px) {
+    .canvas__container {    
+        height: 40vh;
+    }
+    
+    .grid-container{
+        transform: translate3d(-50%, 7%, 0);
+    }
+
+    .top-img  {
+        top:180%
+    }
+
+    .top-right-img {
+        width: 150%;
+        left: -40%;
+        top: 240%;
+    }
+
+    .left-img {
+        top: 240%;
+    }
+
+    .main-img {
+        left: -20%;
+        top: 240%;
+    }
+    
+    .right-img {
+        left: -20%;
+        top: 240%; 
+    }
+
+    .btleft-img {
+        width: 130%;
+        left: -10%;
+        top: 280%;
+    } 
+
+    .bt-img {
+        width: 120%;
+        left: -15%;
+        top: 230%;
+    }
+}
+
+/* ================== Media Query (small devices) ==================== */
+
+@media screen and (max-width: 600px) {
+    .canvas__container {    
+        border-radius: .5rem;
+    }
+
+    .grid-container{
+        transform: translate3d(-45%, -7%, 0);
+    }
+
+    .top-img  {
+        width: 130%;
+        left: -10%;
+        top:270%
+    }
+
+    .top-right-img {
+        width:  600%;
+        left: -350%;
+        top: 230%;
+    }
+
+    .left-img {
+        width: 350%;
+        left: -140%;
+        top: 280%;
+    }
+
+    .main-img {
+        width: 400%;
+        left: -140%;
+        top: 270%;
+    }
+
+    .right-img {
+        width: 400%;
+        left: -140%;
+        top: 270%;
+    }
+
+    .btleft-img {
+        width: 300%;
+        left: -80%;
+        top: 270%;
+    } 
+
+    .bt-img {
+        width: 120%;
+        left: -15%;
+        top: 260%;
+    }
+}

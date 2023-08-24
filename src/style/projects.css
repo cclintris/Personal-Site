@@ -1,0 +1,211 @@
+.container__header {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 10%;
+}
+
+.text__container > h1, .text__container > h4 {
+    text-align: left;
+    color: var(--color-light);
+}
+
+.text__container > h1 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.parallax__img {
+    position: relative;
+    width: 5rem;
+}
+
+.c {
+    left: 0%;
+}
+
+.py {
+    left: 45%;
+    padding-top: 3%;
+}
+
+.matlab {
+    left: 70%;
+    padding-top: 7%;
+}
+
+.go {
+    left: 37%;
+    padding-top: 10%;
+}
+
+.js {
+    width: 10rem;
+    left: 20%;
+    padding-top: 12%;
+}
+
+.opencv {
+    left: 12%;
+    padding-top: 5%;
+}
+
+.pytorch {
+    left: 50%;
+    padding-top: 4%; 
+}
+
+.react {
+    left: 15%;
+}
+
+.nodejs {
+    left: 45%;
+}
+/* ================== project container ================== */
+
+.container__project {
+    margin: auto 5rem auto 5rem;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 6%;
+    padding-top: 5rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.project__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.project__card a h3 {
+    margin: .5rem auto .5rem;
+}
+
+.project__card p {
+    text-align: justify;
+    color: var(--color-light);
+}
+
+.img__card {
+    border-radius: 2rem;
+    opacity: .8;
+    max-height: 17rem;
+}
+
+.img__card:hover {
+    opacity: 1;
+}
+
+.links {
+    margin-right: .5rem;
+    font-size: 2rem;
+}
+
+.link_card {
+    margin-top: .7rem;
+    text-align: left;
+}
+
+/* ================== Media Query (small devices) ==================== */
+@media screen and (max-width: 1024px) {
+    .text__container > h1 {
+        font-size: 1.5rem;
+    }
+
+    .container__header {
+        padding-top: 2rem;
+        padding-bottom: 10rem;
+        grid-template-columns: 43% 55%;
+        gap: 2%;
+    }
+
+    .parallax__img {
+        width: 3rem;
+    }
+    .c {
+        left: 0%;
+        padding-top: 2%;
+    }
+    
+    .py {
+        left: 24%;
+        padding-top: 5%;
+    }
+    
+    .matlab {
+        left: 60%;
+        padding-top: 8%;
+    }
+    
+    .go {
+        left: 40%;
+        padding-top: 13%;
+    }
+    
+    .js {
+        width: 6rem;
+        left: 0%;
+        padding-top: 12%;
+    }
+    
+    .container__project {
+        grid-template-columns: 1fr;
+        margin-bottom: 15rem;
+    }
+
+}  
+
+/* ================== Media Query (small devices) ==================== */
+
+@media screen and (max-width: 600px) {
+    .container__header {
+        padding-top: 0;
+        padding-bottom: 12rem;
+    }
+
+    .text__container > h1 {
+        font-size: 1rem;
+    }
+
+    .parallax__img {
+        width: 2rem;
+    }
+
+    .img__card {
+        border-radius: 1rem;
+    }
+
+    .c {
+        left: 0%;
+        padding-top: 5%;
+    }
+    
+    .py {
+        left: 50%;
+        padding-top: 15%;
+    }
+    
+    .matlab {
+        left: 60%;
+        padding-top: 38%;
+    }
+    
+    .go {
+        left: 40%;
+        padding-top: 40%;
+    }
+    
+    .js {
+        width: 4rem;
+        left: 0%;
+        padding-top: 47%;
+    }
+}  

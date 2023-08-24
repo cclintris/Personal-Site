@@ -1,0 +1,48 @@
+.navbar {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: max-content;
+    display: flex;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    right: 10px;
+    bottom: 98%;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0rem;
+}
+
+.navbar a {
+    border-radius: 50%;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.navbar a:hover {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* ================== Media Query (medium devices) ==================== */
+
+/* ================== Media Query (small devices) ==================== */
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar a{
+        font-size: 1rem;
+    }
+}
