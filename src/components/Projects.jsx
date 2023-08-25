@@ -14,8 +14,8 @@ import java from "../assets/icons/java.png";
 import react from "../assets/icons/react.png";
 import nodejs from "../assets/icons/nodejs.png";
 
-import web from "../assets/projects/personal_web.png";
-import styleDNA from "../assets/projects/styleDNA.png";
+import site from "../assets/projects/personal_site.png";
+import aerb from "../assets/projects/aerb_logger.png";
 import videoframes from "../assets/projects/videoframes.png";
 import autocar from "../assets/projects/autocar.png";
 import { BsGithub } from "react-icons/bs";
@@ -181,24 +181,28 @@ const Projects = () => {
         <div className="container__project">
           <div className="project__card">
             <a
-              href="https://github.com/leo880714/sh122-homepage"
+              href="https://github.com/cclintris/Personal-Site"
               target="_blank"
               rel="noreferrer"
             >
-              <img className="img__card" src={web} alt="personal website"></img>
+              <img
+                className="img__card"
+                src={site}
+                alt="personal website"
+              ></img>
             </a>
             <Link to="/">
               <h3>Personal Portfolio Website</h3>
             </Link>
             <p>
-              The website you are currently looking at. Here, I render several
-              techniques, using react as my backbone and incorporating HTML,
-              CSS, js, parallax effect... Wish you enjoy this web project.
+              The website you are currently looking at. Built with several
+              rendering techniques, using React as my backbone frontend
+              framework and incorporating HTML, CSS, js, parallax effect...
             </p>
             <div className="link_card">
               <a
                 className="links"
-                href="https://github.com/leo880714/sh122-homepage"
+                href="https://github.com/cclintris/Personal-Site"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -210,63 +214,34 @@ const Projects = () => {
 
           <div className="project__card">
             <a
-              href="https://github.com/aiiu-lab/StyleDNA"
+              href="https://github.com/cclintris/S1-AERB-Logger"
               target="_blank"
               rel="noreferrer"
             >
-              <img className="img__card" src={styleDNA} alt="styleDNA"></img>
+              <img className="img__card" src={aerb} alt="aerb_logger"></img>
             </a>
             <a
-              href="https://github.com/aiiu-lab/StyleDNA"
+              href="https://github.com/cclintris/S1-AERB-Logger"
               target="_blank"
               rel="noreferrer"
             >
-              <h3>StyleDNA</h3>
+              <h3>Automatic Extendable Ring Buffer based Logger</h3>
             </a>
             <p>
-              High-fidelity kinship face synthesis receives increasing interest
-              for visual kinship applications, including law enforcement, social
-              media analysis, finding lost children, etc. In this project, we
-              leverage the pretrained state-of-the-art face synthesis model,
-              StyleGAN2, to assist the synthesis. This project also got accepted
-              by{" "}
-              <a
-                href="http://iab-rubric.org/fg2021/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                IEEE International Conference on Automatic Face and Gesture
-                Recognition 2021{" "}
-              </a>
-              .
+              The logger module is an infrastructure microservice used by
+              multiple microservices across the S1 project. It is based on an
+              automatic(A) extendable(E) ring(R) buffer(B). Recommended to
+              integrate S1-AERB-Logger with AWS CloudWatch for Cloud systems.
             </p>
             <div className="link_card">
               <a
                 className="links"
-                href="https://github.com/aiiu-lab/StyleDNA"
+                href="https://github.com/cclintris/S1-AERB-Logger"
                 target="_blank"
                 rel="noreferrer"
               >
                 {" "}
                 <BsGithub />
-              </a>
-              <a
-                className="links"
-                href="https://colab.research.google.com/drive/1FHf5ftbYtAfvODEqj5lp-S1cir44UniT?usp=sharing&fbclid=IwAR24xfMulbHCGlTAtjp0LP4rPO4IDFj-yY6XtktFv932HstnFYLtCnEHl00#scrollTo=OIGl-19F5VMS"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                <SiGooglecolab />
-              </a>
-              <a
-                className="links"
-                href="https://snac3.citi.sinica.edu.tw"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                <AiFillHome />
               </a>
             </div>
           </div>

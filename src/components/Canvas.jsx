@@ -38,53 +38,28 @@ const Canvas = () => {
           >
             <div className="grid-container">
               <div class="top">
-                <img
-                  className="background-img top-img"
-                  src={canvas_2}
-                  alt="Where I'm from"
-                ></img>
+                <img className="background-img top-img" src={canvas_2}></img>
               </div>
               <div class="tpright">
                 <img
                   className="background-img top-right-img"
                   src={canvas_1}
-                  alt="Where I study"
                 ></img>
               </div>
               <div class="left">
-                <img
-                  className="background-img left-img"
-                  src={canvas_3}
-                  alt="The time I like"
-                ></img>
+                <img className="background-img left-img" src={canvas_3}></img>
               </div>
               <div class="main">
-                <img
-                  className="background-img main-img"
-                  src={canvas_4}
-                  alt="The place I visit"
-                ></img>
+                <img className="background-img main-img" src={canvas_4}></img>
               </div>
               <div class="right">
-                <img
-                  className="background-img right-img"
-                  src={canvas_5}
-                  alt="The place I visit"
-                ></img>
+                <img className="background-img right-img" src={canvas_5}></img>
               </div>
               <div class="btleft">
-                <img
-                  className="background-img btleft-img"
-                  src={canvas_6}
-                  alt="People I like"
-                ></img>
+                <img className="background-img btleft-img" src={canvas_6}></img>
               </div>
               <div class="bottom">
-                <img
-                  className="background-img bt-img"
-                  src={canvas_7}
-                  alt="People I like"
-                ></img>
+                <img className="background-img bt-img" src={canvas_7}></img>
               </div>
             </div>
           </ParallaxMousemove.Layer>

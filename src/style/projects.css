@@ -90,6 +90,10 @@
   margin: 0.5rem auto 0.5rem;
 }
 
+.project__card a img {
+  object-fit: unset;
+}
+
 .project__card p {
   text-align: justify;
   color: var(--color-light);
