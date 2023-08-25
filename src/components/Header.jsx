@@ -66,7 +66,7 @@ const Header = () => {
       <div className="container header__container">
         <h2>Hello, I'm</h2>
         <motion.h1 whileHover={{ scale: 1.3 }}>
-          U.S. ? Tristan : Shi Cheng
+          U.S._Name ? Tristan : Shi Cheng
         </motion.h1>
         <h5 className="text-light">
           a software engineer and a fullstack developer

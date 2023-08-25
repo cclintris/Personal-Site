@@ -6,11 +6,11 @@ import Footer from "./Footer";
 import ParallaxMousemove from "react-parallax-mousemove";
 import c from "../assets/icons/c.png";
 import python from "../assets/icons/python.png";
-import matlab from "../assets/icons/matlab.png";
+import aws from "../assets/icons/aws.png";
+import ts from "../assets/icons/ts.png";
 import go from "../assets/icons/go.png";
 import js from "../assets/icons/js.png";
-import opencv from "../assets/icons/opencv.png";
-import pytorch from "../assets/icons/pytorch.png";
+import java from "../assets/icons/java.png";
 import react from "../assets/icons/react.png";
 import nodejs from "../assets/icons/nodejs.png";
 
@@ -29,13 +29,13 @@ const style = {
   },
 };
 
-function Projects() {
+const Projects = () => {
   return (
     <>
       <section id="projects">
         <div className="container container__header">
           <div className="text__container">
-            <h4>See my Projects</h4>
+            <h4>A place to showcase myself</h4>
             <h1>That's what I got</h1>
           </div>
 
@@ -116,11 +116,7 @@ function Projects() {
                   },
                 }}
               >
-                <img
-                  className="parallax__img matlab"
-                  src={matlab}
-                  alt="matlab"
-                ></img>
+                <img className="parallax__img ts" src={ts} alt="ts"></img>
               </ParallaxMousemove.Layer>
 
               <ParallaxMousemove.Layer
@@ -162,11 +158,7 @@ function Projects() {
                   },
                 }}
               >
-                <img
-                  className="parallax__img opencv"
-                  src={opencv}
-                  alt="opencv"
-                ></img>
+                <img className="parallax__img aws" src={aws} alt="aws"></img>
               </ParallaxMousemove.Layer>
 
               <ParallaxMousemove.Layer
@@ -180,11 +172,7 @@ function Projects() {
                   },
                 }}
               >
-                <img
-                  className="parallax__img pytorch"
-                  src={pytorch}
-                  alt="pytorch"
-                ></img>
+                <img className="parallax__img java" src={java} alt="java"></img>
               </ParallaxMousemove.Layer>
             </ParallaxMousemove>
           </div>
@@ -390,6 +378,6 @@ function Projects() {
       </section>
     </>
   );
-}
+};
 
 export default Projects;
