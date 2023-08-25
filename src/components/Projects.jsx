@@ -16,11 +16,9 @@ import nodejs from "../assets/icons/nodejs.png";
 
 import site from "../assets/projects/personal_site.png";
 import aerb from "../assets/projects/aerb_logger.png";
-import videoframes from "../assets/projects/videoframes.png";
+import coinKG from "../assets/projects/coinKG.png";
 import autocar from "../assets/projects/autocar.png";
 import { BsGithub } from "react-icons/bs";
-import { SiGooglecolab } from "react-icons/si";
-import { AiFillHome } from "react-icons/ai";
 
 const style = {
   infoLayerStyle: {
@@ -248,59 +246,35 @@ const Projects = () => {
 
           <div className="project__card">
             <a
-              href="https://github.com/michael5107414/CV_project"
+              href="https://github.com/cclintris/coinKG"
               target="_blank"
               rel="noreferrer"
             >
               <img
                 className="img__card"
-                src={videoframes}
-                alt="videoframes"
+                src={coinKG}
+                alt="coin knowledge graph"
               ></img>
             </a>
             <a
-              href="https://github.com/michael5107414/CV_project"
+              href="https://github.com/cclintris/coinKG"
               target="_blank"
               rel="noreferrer"
             >
-              <h3>Video Frames Interpolation</h3>
+              <h3>Knowledge Graph Construction and Visualization System </h3>
             </a>
             <p>
-              We designed a video interpolation pipeline and utilized techniques
-              based on both deep-learning-based and non-deep-learning-based
-              solutions. This projects also rewarded Second Prize in the final
-              project competition held by the Department of{" "}
-              <a
-                href="https://web.ee.ntu.edu.tw/eng/index.php"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                Electrical Engineering
-              </a>{" "}
-              at{" "}
-              <a
-                href="https://www.ntu.edu.tw/english/index.html"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {" "}
-                Nation Taiwan University{" "}
-              </a>
-              competition associated with{" "}
-              <a
-                href="https://www.mediatek.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                MediaTek
-              </a>{" "}
-              among 15 teams
+              Knowledge graph definition + visualization system and a culinary
+              dialogue system based on editable knowledge graphs : construct
+              rudimentary graph tuples with the editors system provides, and
+              capable of applying the constructed knowledge graph to a
+              intelligent level, realizing knowledge graph semantics query,
+              smart ask-question etc.
             </p>
             <div className="link_card">
               <a
                 className="links"
-                href="https://github.com/michael5107414/CV_project"
+                href="https://github.com/cclintris/coinKG"
                 target="_blank"
                 rel="noreferrer"
               >
