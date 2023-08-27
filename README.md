@@ -1,7 +1,13 @@
 # My Web Portfolio
 
-### Author : She-Chuan Hsu
+### Author : Tristan Lin
 
-### Web: [Link](https://sh122-homepage.vercel.app)
+### Website Link: [https://tristanlin-portfolio.vercel.app/](https://tristanlin-portfolio.vercel.app/)
 
-### Since: Jul 2022
+### Since: Aug 2023
+
+### Versions
+
+| version | date      |
+| :------ | :-------- |
+| v.1     | 8/27/2023 |
