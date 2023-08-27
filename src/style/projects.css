@@ -13,6 +13,11 @@
   color: var(--color-light);
 }
 
+.wink {
+  width: 60%;
+  /* height: 60%; */
+}
+
 .text__container > h1 {
   color: var(--color-primary);
   margin-bottom: 3rem;

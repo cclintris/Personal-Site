@@ -25,7 +25,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      {Cursor()}
+      {/* {Cursor()} */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />

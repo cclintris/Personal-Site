@@ -66,11 +66,11 @@ const Contact = () => {
           </h4>
           <h4>
             <a
-              href="https://medium.com/@leo3590581"
+              href="https://gist.github.com/cclintris"
               target="_blank"
               rel="noreferrer"
             >
-              Blog
+              Github Gists
             </a>
           </h4>
         </div>

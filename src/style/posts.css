@@ -1,9 +1,25 @@
 .container__posts {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
   width: 100%;
-  row-gap: 2rem;
+  row-gap: 4rem;
+  column-gap: 2rem;
+}
+
+.container__posts > a {
+  cursor: pointer;
+}
+
+.text__container {
+  margin-bottom: 4rem;
+}
+
+.img__cardpost {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
 }
 
 .post__container {

@@ -38,12 +38,12 @@ const Canvas = () => {
           >
             <div className="grid-container">
               <div class="top">
-                <img className="background-img top-img" src={canvas_2}></img>
+                <img className="background-img top-img" src={canvas_1}></img>
               </div>
               <div class="tpright">
                 <img
                   className="background-img top-right-img"
-                  src={canvas_1}
+                  src={canvas_2}
                 ></img>
               </div>
               <div class="left">

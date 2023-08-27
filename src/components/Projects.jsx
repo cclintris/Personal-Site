@@ -17,7 +17,8 @@ import nodejs from "../assets/icons/nodejs.png";
 import site from "../assets/projects/personal_site.png";
 import aerb from "../assets/projects/aerb_logger.png";
 import coinKG from "../assets/projects/coinKG.png";
-import autocar from "../assets/projects/autocar.png";
+import iot from "../assets/projects/iot.png";
+import wink from "../assets/wink.gif";
 import { BsGithub } from "react-icons/bs";
 
 const style = {
@@ -33,8 +34,9 @@ const Projects = () => {
       <section id="projects">
         <div className="container container__header">
           <div className="text__container">
-            <h4>A place to showcase myself</h4>
-            <h1>That's what I got</h1>
+            <h4>A place to showcase my</h4>
+            <h1>SWE Projects</h1>
+            <img className="wink" src={wink} alt="wink"></img>
           </div>
 
           <div className="">
@@ -265,11 +267,11 @@ const Projects = () => {
             </a>
             <p>
               Knowledge graph definition + visualization system and a culinary
-              dialogue system based on editable knowledge graphs : construct
-              rudimentary graph tuples with the editors system provides, and
-              capable of applying the constructed knowledge graph to a
-              intelligent level, realizing knowledge graph semantics query,
-              smart ask-question etc.
+              dialogue system based on editable knowledge graphs. Constructed
+              rudimentary graph tuples with the editors system provided, and
+              capable of applying constructed knowledge graphs to a intelligent
+              level, realizing knowledge graph semantics query, smart
+              ask-question etc.
             </p>
             <div className="link_card">
               <a
@@ -286,38 +288,40 @@ const Projects = () => {
 
           <div className="project__card">
             <a
-              href="http://www.me.ntu.edu.tw/epaper/20200630/News_Photo_Content_n_44379_s_64996.html"
+              href="https://github.com/cclintris/IoT-Facial-Recognition"
               target="_blank"
               rel="noreferrer"
             >
               <img
                 className="img__card"
-                src={autocar}
-                alt="personal website"
+                src={iot}
+                alt="iot-facial-recognition"
               ></img>
             </a>
             <a
-              href="http://www.me.ntu.edu.tw/capstone/"
+              href="https://github.com/cclintris/IoT-Facial-Recognition"
               target="_blank"
               rel="noreferrer"
             >
-              <h3>Automatic Car Competition</h3>
+              <h3>IoT facial recognition system</h3>
             </a>
             <p>
-              We designed and implemented an autonomous car that is capable of
-              detecting other cars on the track, sidestepping and cutting off
-              cars through any track in the final competition. In the final exam
-              copetition held by the Department of{" "}
+              Using the Huawei Atlas board as a camera, I developed a system
+              capturing streaming videos, uploading it to cloud servers, and
+              displaying the streaming video at frontend with facial recognition
+              functionalities applying Atlas ML algorithms and computer vision.
+            </p>
+            <div className="link_card">
               <a
-                href="http://www.me.ntu.edu.tw/main.php?site_id=1"
+                className="links"
+                href="https://github.com/cclintris/IoT-Facial-Recognition"
                 target="_blank"
                 rel="noreferrer"
               >
-                Mechanicla Engineering{" "}
-              </a>{" "}
-              at Nation Taiwan University, out team awarded First Prize in final
-              project competition among 150 participants.
-            </p>
+                {" "}
+                <BsGithub />
+              </a>
+            </div>
           </div>
         </div>
       </section>
