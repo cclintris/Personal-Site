@@ -14,6 +14,8 @@ import ListItemText from "@mui/material/ListItemText";
 import ListSubheader from "@mui/material/ListSubheader";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
+import Alert from "@mui/material/Alert";
+import Snackbar from "@mui/material/Snackbar";
 
 import cpp from "../assets/icons/c.png";
 import aws from "../assets/icons/aws.png";
@@ -22,6 +24,9 @@ import go from "../assets/icons/go.png";
 import js from "../assets/icons/js.png";
 import react from "../assets/icons/react.png";
 import nodejs from "../assets/icons/nodejs.png";
+
+import goPosts from "../posts/go";
+import jsPosts from "../posts/javascript";
 
 const Posts = () => {
   const [jsOpen, setJsOpen] = useState(false);
@@ -32,25 +37,25 @@ const Posts = () => {
   const [nodeOpen, setNodeOpen] = useState(false);
   const [awsOpen, setAwsOpen] = useState(false);
 
-  const [goPosts, setGoPosts] = useState([
-    {
-      title: "[Golang]: goroutines, channels and concurrency",
-      url: "https://snippets.cacher.io/snippet/47a0ae574c119568aa1c",
-    },
-    {
-      title: "[Golang]: What are struct tags and why do we use them in Go?",
-      url: "https://snippets.cacher.io/snippet/8df1db0da3201dd3ae1a",
-    },
-    {
-      title: "[Golang]: map[string]interface{} in Go",
-      url: "https://snippets.cacher.io/snippet/0b3cbb7a3e69ccdaf67b",
-    },
-    {
-      title: "[Golang pkg]: A top to bottom view of Context",
-      url: "https://snippets.cacher.io/snippet/b0db0d102236edb9cdfe",
-    },
-  ]);
+  const [showAlert, setShowAlert] = useState(false);
 
+  const handleShowAlert = (newShowAlert) => {
+    setShowAlert(true);
+  };
+
+  const handleCloseAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setShowAlert(false);
+  };
+
+  useEffect(() => {
+    handleShowAlert();
+  }, []);
+
+  // list js blogs
   const listJs = (dir, update) => (
     <Box
       sx={{ width: dir === "top" || dir === "bottom" ? "auto" : 450 }}
@@ -60,15 +65,26 @@ const Posts = () => {
       <List
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            JavaScript Blogs
+            Golang Blogs
           </ListSubheader>
         }
+        style={{ backgroundColor: "#fbf9f9" }}
       >
-        To be updated ...
+        {jsPosts.map(({ title, url, date }, key) => (
+          <React.Fragment key={key}>
+            <Link underline="hover" href={url} target="_blank">
+              <ListItem>
+                <ListItemText primary={title} secondary={date} />
+              </ListItem>
+            </Link>
+            <Divider />
+          </React.Fragment>
+        ))}
       </List>
     </Box>
   );
 
+  // list ts blogs
   const listTs = (dir, update) => (
     <Box
       sx={{ width: dir === "top" || dir === "bottom" ? "auto" : 450 }}
@@ -81,6 +97,7 @@ const Posts = () => {
             TypeScript Blogs
           </ListSubheader>
         }
+        style={{ textAlign: "center" }}
       >
         To be updated ...
       </List>
@@ -102,11 +119,11 @@ const Posts = () => {
         }
         style={{ backgroundColor: "#fbf9f9" }}
       >
-        {goPosts.map(({ title, url }, key) => (
+        {goPosts.map(({ title, url, date }, key) => (
           <React.Fragment key={key}>
             <Link underline="hover" href={url} target="_blank">
               <ListItem>
-                <ListItemText primary={title} secondary="Jan 9, 2014" />
+                <ListItemText primary={title} secondary={date} />
               </ListItem>
             </Link>
             <Divider />
@@ -116,6 +133,7 @@ const Posts = () => {
     </Box>
   );
 
+  // list react blogs
   const listReact = (dir, update) => (
     <Box
       sx={{ width: dir === "top" || dir === "bottom" ? "auto" : 450 }}
@@ -128,12 +146,14 @@ const Posts = () => {
             React Blogs
           </ListSubheader>
         }
+        style={{ textAlign: "center" }}
       >
         To be updated ...
       </List>
     </Box>
   );
 
+  // list c++ blogs
   const listCpp = (dir, update) => (
     <Box
       sx={{ width: dir === "top" || dir === "bottom" ? "auto" : 450 }}
@@ -146,12 +166,14 @@ const Posts = () => {
             C++ Blogs
           </ListSubheader>
         }
+        style={{ textAlign: "center" }}
       >
         To be updated ...
       </List>
     </Box>
   );
 
+  // list Node.js blogs
   const listNode = (dir, update) => (
     <Box
       sx={{ width: dir === "top" || dir === "bottom" ? "auto" : 450 }}
@@ -164,12 +186,14 @@ const Posts = () => {
             Node.js Blogs
           </ListSubheader>
         }
+        style={{ textAlign: "center" }}
       >
         To be updated ...
       </List>
     </Box>
   );
 
+  // list aws blogs
   const listAws = (dir, update) => (
     <Box
       sx={{ width: dir === "top" || dir === "bottom" ? "auto" : 450 }}
@@ -182,6 +206,7 @@ const Posts = () => {
             AWS Blogs
           </ListSubheader>
         }
+        style={{ textAlign: "center" }}
       >
         To be updated ...
       </List>
@@ -190,6 +215,21 @@ const Posts = () => {
 
   return (
     <>
+      <Snackbar
+        open={showAlert}
+        autoHideDuration={6000}
+        onClose={handleCloseAlert}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseAlert}
+          severity="info"
+          sx={{ width: "100%" }}
+        >
+          Some categories are currently empty, but keep an eye, blogs will be
+          updated soon!
+        </Alert>
+      </Snackbar>
       <section id="posts">
         <div className="container">
           <div className="text__container">
