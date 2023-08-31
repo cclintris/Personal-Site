@@ -73,6 +73,15 @@ const Contact = () => {
               Github Gists
             </a>
           </h4>
+          <h4>
+            <a
+              href="https://www.instagram.com/cclinsing/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Music
+            </a>
+          </h4>
         </div>
       </div>
     </section>

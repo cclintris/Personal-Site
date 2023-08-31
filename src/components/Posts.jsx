@@ -24,9 +24,11 @@ import go from "../assets/icons/go.png";
 import js from "../assets/icons/js.png";
 import react from "../assets/icons/react.png";
 import nodejs from "../assets/icons/nodejs.png";
+import fullstack from "../assets/icons/fullstack.png";
 
 import goPosts from "../posts/go";
 import jsPosts from "../posts/javascript";
+import fullStackPosts from "../posts/fullstack";
 
 const Posts = () => {
   const [jsOpen, setJsOpen] = useState(false);
@@ -36,6 +38,7 @@ const Posts = () => {
   const [cppOpen, setCppOpen] = useState(false);
   const [nodeOpen, setNodeOpen] = useState(false);
   const [awsOpen, setAwsOpen] = useState(false);
+  const [fullstackOpen, setFullstackOpen] = useState(false);
 
   const [showAlert, setShowAlert] = useState(false);
 
@@ -65,7 +68,7 @@ const Posts = () => {
       <List
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            Golang Blogs
+            JavaScript Blogs
           </ListSubheader>
         }
         style={{ backgroundColor: "#fbf9f9" }}
@@ -213,6 +216,35 @@ const Posts = () => {
     </Box>
   );
 
+  // list fullstack blogs
+  const listFullstack = (dir, update) => (
+    <Box
+      sx={{ width: dir === "top" || dir === "bottom" ? "auto" : 450 }}
+      onClick={() => update(false)}
+      onKeyDown={() => update(false)}
+    >
+      <List
+        subheader={
+          <ListSubheader component="div" id="nested-list-subheader">
+            Fullstack Blogs
+          </ListSubheader>
+        }
+        style={{ backgroundColor: "#fbf9f9" }}
+      >
+        {fullStackPosts.map(({ title, url, date }, key) => (
+          <React.Fragment key={key}>
+            <Link underline="hover" href={url} target="_blank">
+              <ListItem>
+                <ListItemText primary={title} secondary={date} />
+              </ListItem>
+            </Link>
+            <Divider />
+          </React.Fragment>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
     <>
       <Snackbar
@@ -313,6 +345,26 @@ const Posts = () => {
             onClose={() => setAwsOpen(false)}
           >
             {listAws("right", setAwsOpen)}
+          </Drawer>
+
+          {/* fullstack */}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setFullstackOpen(true)}
+          >
+            <img
+              className="img__cardpost"
+              src={fullstack}
+              alt="fullstack"
+            ></img>
+          </a>
+          <Drawer
+            anchor="right"
+            open={fullstackOpen}
+            onClose={() => setFullstackOpen(false)}
+          >
+            {listFullstack("right", setFullstackOpen)}
           </Drawer>
         </div>
 
